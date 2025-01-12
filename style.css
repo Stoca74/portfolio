@@ -1,0 +1,303 @@
+/* Réinitialisation de base */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #E0E0E0;
+    background: linear-gradient(135deg, #0D0D0D, #1C1C1C); /* Dégradé sombre */
+    line-height: 1.6;
+}
+
+/* Ajoute un espace sous le header pour éviter qu'il cache le contenu */
+body {
+    padding-top: 80px; /* Ajustez cette valeur pour correspondre à la hauteur du header */
+}
+
+header {
+    position: fixed; /* Garde le header fixe en haut */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* S'assure que le header est au-dessus des autres éléments */
+    background-color: rgba(0, 0, 0, 0.9); /* Fond noir semi-transparent */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre */
+}
+
+
+/* Navigation - Menu */
+nav#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav#menu ul li {
+    display: inline;
+}
+
+nav#menu ul li a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav#menu ul li a:hover {
+    color: #6A1B9A; /* Accent violet */
+}
+
+/* Effet pour la section d'accueil */
+#header-container {
+    position: relative;
+    text-align: center;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#header-container h1 {
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+}
+
+#header-container p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+/* Sections générales */
+section {
+    padding: 40px 5%;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    color: #6A1B9A;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Boutons et liens */
+a {
+    color: #1976D2; /* Accent bleu */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #6A1B9A; /* Accent violet */
+}
+
+button {
+    background: #6A1B9A;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #8E24AA;
+    transform: translateY(-3px);
+}
+
+/* Formulaire de contact */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6A1B9A;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #8E24AA;
+    outline: none;
+}
+
+form button {
+    align-self: flex-start;
+}
+
+/* Section des réalisations */
+#liste-realisations {
+    padding: 40px;
+    background-color: #d4d8dc;
+    text-align: center;
+}
+
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projet {
+    position: relative;
+    width: 300px; /* Largeur des projets */
+    height: 200px; /* Hauteur des projets */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Les images occupent tout l'espace sans déformation */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.projet .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir légèrement transparent */
+    color: white; /* Texte blanc */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center; /* Aligne le texte au centre */
+    padding: 20px; /* Espacement interne */
+    opacity: 0; /* Invisible par défaut */
+    transition: opacity 0.3s ease; /* Animation douce */
+}
+
+.projet h3 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+.projet p {
+    font-size: 14px;
+    margin-bottom: 20px; /* Espacement sous la description */
+}
+
+.projet a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #9552eb; /* Couleur violette */
+    font-weight: bold; /* Texte en gras */
+    border: 2px solid #9552eb; /* Bordure violette */
+    padding: 5px 10px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation sur le bouton */
+}
+
+.projet a:hover {
+    background-color: #9552eb; /* Fond violet au survol */
+    color: white; /* Texte blanc */
+}
+
+.projet:hover {
+    transform: scale(1.05); /* Effet d'agrandissement */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+.projet:hover img {
+    transform: scale(1.1); /* Zoom sur l'image */
+}
+
+.projet:hover .overlay {
+    opacity: 1; /* Rend le texte visible */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: white;
+    display: flex; /* Active le flexbox pour un centrage facile */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Texte centré */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px; /* Assure un arrondi propre */
+    box-sizing: border-box; /* Prévient tout dépassement dû au padding */
+}
+
+/* Transition d'apparition pour une animation fluide */
+.projet {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Apparition des projets lors du chargement */
+.projet.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #000;
+    color: #E0E0E0;
+    font-size: 0.9rem;
+    border-top: 2px solid #6A1B9A;
+}

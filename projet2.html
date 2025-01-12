@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2 - Portfolio FAVRE Esteban</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+<section id="details-projet">
+    <h2>Projet 2 : Développement d’un système de fichiers sécurisé avec Docker (Projet en groupe)</h2>
+
+    <h3>Contexte du projet</h3>
+    <p>
+        Ce projet a été réalisé dans le cadre d’un travail de groupe à l’IUT durant ma 3ème année de BUT. L’objectif était de concevoir un système de partage de fichiers sécurisé et centralisé pour des utilisateurs dans un réseau d’entreprise simulé.
+        Ce projet intégrait plusieurs services déployés sur des conteneurs Docker pour garantir une infrastructure modulaire et facilement administrable.
+    </p>
+
+    <h3>Méthodes de travail</h3>
+    <ul>
+        <li>
+            <strong>Planification et répartition des tâches :</strong>
+            <ul>
+                <li>Réunions d’équipe pour définir les objectifs du projet, les contraintes techniques et la répartition des responsabilités.</li>
+                <li>Chaque membre était responsable d’un ou plusieurs services à déployer et sécuriser.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Développement et déploiement :</strong>
+            <ul>
+                <li>Déploiement des services suivants via Docker :</li>
+                <ul>
+                    <li>Grafana pour la supervision et la visualisation des métriques du système.</li>
+                    <li>Apache pour servir les fichiers partagés.</li>
+                    <li>PHPMyAdmin pour la gestion des bases de données associées.</li>
+                    <li>OpenLDAP pour gérer les utilisateurs et les permissions de manière centralisée.</li>
+                    <li>Promtail pour la collecte des logs.</li>
+                    <li>Traefik comme reverse proxy pour gérer le routage sécurisé entre les services.</li>
+                </ul>
+            </ul>
+        </li>
+        <li>
+            <strong>Tests et optimisation :</strong>
+            <ul>
+                <li>Mise en place d’un environnement de test virtuel pour simuler différents scénarios d’utilisation.</li>
+                <li>Vérification de la robustesse des services face à des volumes de fichiers importants.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Résultats obtenus</h3>
+    <p>
+        Le système de fichiers sécurisé a été déployé avec succès, offrant une solution fiable et évolutive pour la gestion des fichiers partagés.
+        L’infrastructure basée sur Docker a permis de garantir la portabilité et la modularité du projet.
+        Une supervision efficace grâce à Grafana et une centralisation des logs avec Promtail, permettant une surveillance continue de l’infrastructure.
+    </p>
+
+    <h3>Compétences travaillées</h3>
+    <ul>
+        <li>
+            <strong>Techniques :</strong>
+            <ul>
+                <li>Configuration et gestion avancée de conteneurs Docker.</li>
+                <li>Déploiement et sécurisation de services (Grafana, Apache, Traefik, OpenLDAP, etc.).</li>
+                <li>Mise en place de systèmes d’authentification centralisés (LDAP).</li>
+                <li>Gestion des logs et supervision avec Promtail et Grafana.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Transversales :</strong>
+            <ul>
+                <li>Collaboration en équipe avec des outils de gestion de projet.</li>
+                <li>Communication pour résoudre les problèmes techniques et assurer l’interopérabilité des services.</li>
+                <li>Gestion du temps pour respecter les deadlines.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+
+</html>
